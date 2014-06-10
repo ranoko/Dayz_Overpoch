@@ -7,7 +7,7 @@ cutText ["","BLACK OUT"];
 enableSaving [false, false];
 
 //REALLY IMPORTANT VALUES
-dayZ_instance =	3176;					//The instance
+dayZ_instance =	11;					//The instance
 dayzHiveRequest = [];
 initialized = false;
 dayz_previousID = 0;
@@ -29,7 +29,7 @@ MaxDynamicDebris = 100; // Default = 100
 dayz_MapArea = 14000; // Default = 10000
 dayz_maxLocalZombies = 30; // Default = 30 
 
-dayz_paraSpawn = true;
+dayz_paraSpawn = false;
 DZE_requireplot = 0;
 dayz_minpos = -1; 
 dayz_maxpos = 16000;
