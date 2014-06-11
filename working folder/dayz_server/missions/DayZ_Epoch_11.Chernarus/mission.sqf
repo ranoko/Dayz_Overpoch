@@ -1786,5 +1786,46 @@ if (true) then
   _this setPos [13817.806, 11746.111, -27.215347];
 };
 
+_unit_1353 = objNull;
+if (true) then
+{
+  _this = createAgent ["gsc_eco_stalker_mask_fred", [630.92, 7810.9, 0], [], 0, "CAN_COLLIDE"];
+  _unit_1353 = _this;
+  _this setDir 290;
+  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
+  _this setUnitAbility 0.60000002;
+  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
+
+  _unit_1354 = objNull;
+if (true) then
+{
+  _this = createAgent ["gsc_eco_stalker_mask_fred", [11455.3, 11335.5, 0], [], 0, "CAN_COLLIDE"];
+  _unit_1354 = _this;
+  _this setDir 350;
+  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
+  _this setUnitAbility 0.60000002;
+  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
+
+    _unit_1355 = objNull;
+if (true) then
+{
+  _this = createAgent ["gsc_eco_stalker_mask_fred", [4029.09, 11673.3, 0], [], 0, "CAN_COLLIDE"];
+  _unit_1355 = _this;
+  _this setDir 45;
+  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
+  _this setUnitAbility 0.60000002;
+  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
+
+      _unit_1356 = objNull;
+if (true) then
+{
+  _this = createAgent ["gsc_eco_stalker_mask_fred", [12063.6, 12635.1, 0], [], 0, "CAN_COLLIDE"];
+  _unit_1356 = _this;
+  _this setDir 20;
+  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
+  _this setUnitAbility 0.60000002;
+  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
+
+
 processInitCommands;
 
