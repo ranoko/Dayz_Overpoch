@@ -1789,7 +1789,7 @@ if (true) then
 _unit_1353 = objNull;
 if (true) then
 {
-  _this = createAgent ["gsc_eco_stalker_mask_fred", [630.92, 7810.9, 0], [], 0, "CAN_COLLIDE"];
+  _this = createAgent ["gsc_eco_stalker_mask_fred", [6304.92, 7810.9, 0], [], 0, "CAN_COLLIDE"];
   _unit_1353 = _this;
   _this setDir 290;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
