@@ -30,7 +30,7 @@ switch true do {
     default  //Default Loadout
         {
 		DefaultMagazines = ["ItemPainkiller","FoodCanBakedBeans","7Rnd_45ACP_1911","7Rnd_45ACP_1911","ItemBandage","ItemBandage","ItemWaterbottle"];
-		DefaultWeapons = ["Colt1911","ItemCompass","ItemFlashlight","Binocular","ItemMap"]; 
+		DefaultWeapons = ["Colt1911","ItemCompass","ItemToolbox","ItemFlashlight","Binocular","ItemMap"]; 
 		DefaultBackpack = "US_Assault_Pack_EP1";
         };
 };
