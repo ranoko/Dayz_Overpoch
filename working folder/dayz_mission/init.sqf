@@ -23,7 +23,6 @@ enableSentences false;
 spawnShoremode = 1; // Default = 1 (on shore)
 spawnArea= 1500; // Default = 1500
 DZE_BuildingLimit = 500;
-
 MaxVehicleLimit = 500; // Default = 50
 MaxDynamicDebris = 100; // Default = 100
 dayz_MapArea = 14000; // Default = 10000
@@ -97,7 +96,6 @@ if (!isDedicated) then {
 };
 
 _fast_roping = [] execVM "=BTC=_fast_roping\=BTC=_fast_roping_init.sqf";
-
 //Start Dynamic Weather
 execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
 

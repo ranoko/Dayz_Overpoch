@@ -5,235 +5,677 @@ class CfgBuildingLoot {
 		zombieChance = 0.2;
 		minRoaming = 0;
 		maxRoaming = 2;
-		zombieClass[] = {"zZombie_Base", "z_hunter", "z_teacher", "z_suit1", "z_suit2", "z_worker1", "z_worker2", "z_worker3", "z_villager1", "z_villager2", "z_villager3"};
+		zombieClass[] = {"zZombie_Base","z_hunter","z_teacher","z_suit1","z_suit2","z_worker1","z_worker2","z_worker3","z_villager1","z_villager2","z_villager3"};
 		lootChance = 0;
 		lootPos[] = {};
+
 		lootPosSmall[] = {};
 		lootPosZombie[] = {};
+		
 		itemType[] = {};
+
 		itemChance[] = {};
-		itemTypeSmall[] = {};
+		lootTypeSmall[] = {};
 		itemChanceSmall[] = {};
+
 		hangPos[] = {};
 		vehPos[] = {};
 	};
 	
-	class Residential : Default {
+	class Castle: Default {
+		lootChance = 0.2;
+		lootPos[] = {};
+		lootType[] = {
+			{"ItemKnife","weapon",0.01},
+			{"ItemMap","generic",0.01},
+			{"ItemCompass","weapon",0.01},
+			{"ItemFlashlight","weapon",0.01},
+			{"WeaponHolder_ItemHatchet","object",0.01},
+			{"WeaponHolder_ItemTent","object",0.01},
+			{"PartWoodPile","magazine",0.04},
+			{"","generic",0.40}
+		};
+	};
+	class Residential: Default {
 		zombieChance = 0.3;
 		maxRoaming = 2;
-		zombieClass[] = {"zZombie_Base", "z_hunter", "z_teacher", "z_villager1", "z_villager2", "z_villager3"};
+		zombieClass[] = {"zZombie_Base","z_hunter","z_teacher","z_villager1","z_villager2","z_villager3"};
 		lootChance = 0.4;
 		lootPos[] = {};
-		itemType[] = {{"ItemWatch", "generic"}, {"ItemCompass", "generic"}, {"ItemMap", "weapon"}, {"pistols", "cfglootweapon"}, {"ItemFlashlight", "generic"}, {"ItemKnife", "generic"}, {"ItemMatchbox_DZE", "generic"}, {"", "generic"}, {"backpacks", "backpack"}, {"tents", "single"}, {"", "military"}, {"", "trash"}, {"Binocular", "weapon"}, {"PartPlywoodPack", "magazine"}, {"clothes", "single"}, {"specialclothes", "single"}, {"WeaponHolder_MeleeCrowbar", "object"}, {"shotgunsingleshot", "cfglootweapon"}};
-		itemChance[] = {0.04, 0.03, 0.02, 0.1, 0.01, 0.04, 0.01, 0.36, 0.04, 0.01, 0.02, 0.17, 0.02, 0.02, 0.01, 0.01, 0.03, 0.06};
-		itemTypeSmall[] = {{"ItemSodaMdew", "magazine"},  {"ItemSodaRbull", "magazine"},  {"ItemSodaOrangeSherbet", "magazine"},  {"ItemWatch", "weapon"},  {"ItemCompass", "weapon"},  {"ItemMap", "weapon"},  {"pistols", "cfglootweapon"},  {"ItemFlashlight", "weapon"},  {"ItemKnife", "weapon"},  {"ItemMatchbox_DZE", "weapon"},  {"", "generic"}, {"", "military"}, {"", "trash"}, {"Binocular", "weapon"},  {"clothes", "single"},  {"specialclothes", "single"}};
-		itemChanceSmall[] = {0.01, 0.01, 0.02, 0.05, 0.04, 0.03, 0.12, 0.02, 0.04, 0.03, 0.38, 0.04, 0.17, 0.02, 0.01, 0.01};
+		lootType[] = {
+			{"ItemWatch","generic",0.04},
+			{"ItemCompass","generic",0.03},
+			{"ItemMap","weapon",0.02},
+			{"ItemFlashlight","generic",0.01},
+			{"ItemKnife","generic",0.04},
+			{"ItemMatchbox_DZE","generic",0.01},
+			{"","generic",0.32},
+			{"backpacks","backpacks",0.04},
+			{"tents","tents",0.01},
+			{"","military",0.02},
+			{"","trash",0.17},
+			{"Binocular","weapon",0.02},
+			{"PartPlywoodPack","magazine",0.02},
+			{"clothes","clothes",0.01},
+			{"specialclothes","specialclothes",0.01},
+			{"WeaponHolder_MeleeCrowbar","object",0.03},
+			{"pistols", "cfglootweapon", 0.04 },
+			{"shotgunsingleshot", "cfglootweapon", 0.04 }
+		};
+		lootTypeSmall[] = {
+			{ "ItemSodaMdew","magazine",0.01 },
+			{ "ItemSodaRbull","magazine",0.01 },
+			{ "ItemSodaOrangeSherbet","magazine",0.02 },
+			{ "ItemWatch","weapon",0.05 },
+			{ "ItemCompass","weapon",0.04 },
+			{ "ItemMap","weapon",0.03 },
+			{ "pistols","cfglootweapon",0.12 },
+			{ "ItemFlashlight","weapon",0.02 },
+			{ "ItemKnife","weapon",0.04 },
+			{ "ItemMatchbox_DZE","weapon",0.03 },
+			{ "","generic",0.38 },
+			{ "","military",0.04 },
+			{ "","trash",0.17 },
+			{ "Binocular","weapon",0.02 },
+			{ "clothes","single",0.01},
+			{ "specialclothes","single",0.01 }
+		};
 	};
-	
-	class Office : Default {
+	class Office: Default {
 		maxRoaming = 3;
-		zombieClass[] = {"z_suit1", "z_suit2"};
+		zombieClass[] = {"z_suit1","z_suit2"};
 		zombieChance = 0.3;
 		lootChance = 0.4;
 		lootPos[] = {};
-		itemType[] = {{"ItemWatch", "generic"},  {"ItemCompass", "generic"},  {"ItemMap", "weapon"},  {"pistols", "cfglootweapon"},  {"ItemFlashlight", "generic"},  {"ItemKnife", "generic"},  {"ItemMatchbox_DZE", "generic"},  {"", "generic"}, {"shotgunsingleshot", "cfglootweapon"},  {"backpacks", "backpack"},  {"tents", "single"},  {"", "military"}, {"", "trash"}, {"Binocular", "weapon"},  {"PartPlywoodPack", "magazine"},  {"clothes", "single"},  {"specialclothes", "single"},  {"WeaponHolder_MeleeCrowbar", "object"},  {"ItemBriefcaseEmpty", "magazine"}};
-		itemChance[] = {0.04, 0.03, 0.02, 0.11, 0.01, 0.04, 0.01, 0.31, 0.05, 0.04, 0.01, 0.02, 0.21, 0.02, 0.02, 0.01, 0.01, 0.03, 0.01};
-		itemTypeSmall[] = {{"ItemSodaMdew", "magazine"},  {"ItemSodaRbull", "magazine"},  {"ItemSodaOrangeSherbet", "magazine"},  {"ItemWatch", "weapon"},  {"ItemCompass", "weapon"},  {"ItemMap", "weapon"},  {"pistols", "cfglootweapon"},  {"ItemFlashlight", "weapon"},  {"ItemKnife", "weapon"},  {"ItemMatchbox_DZE", "weapon"},  {"", "generic"}, {"", "military"}, {"", "trash"}, {"Binocular", "weapon"},  {"clothes", "single"},  {"specialclothes", "single"},  {"ItemDocument", "magazine"}};
-		itemChanceSmall[] = {0.01, 0.01, 0.02, 0.05, 0.04, 0.03, 0.15, 0.02, 0.05, 0.03, 0.31, 0.04, 0.03, 0.02, 0.16, 0.02, 0.01};
+		lootType[] = {
+			{"ItemWatch","generic",0.04},
+			{"ItemCompass","generic",0.03},
+			{"ItemMap","weapon",0.02},
+			{"ItemFlashlight","generic",0.01},
+			{"ItemKnife","generic",0.04},
+			{"ItemMatchbox_DZE","generic",0.01},
+			{"","generic",0.31},
+			{"backpacks","backpacks",0.04},
+			{"tents","tents",0.01},
+			{"","military",0.02},
+			{"","trash",0.21},
+			{"Binocular","weapon",0.02},
+			{"PartPlywoodPack","magazine",0.02},
+			{"clothes","clothes",0.01},
+			{"specialclothes","specialclothes",0.01},
+			{"WeaponHolder_MeleeCrowbar","object",0.03},
+			{"ItemBriefcaseEmpty","magazine",0.01},
+			{ "shotgunsingleshot", "cfglootweapon", 0.05}
+		};
+		lootTypeSmall[] = {
+			{ "ItemSodaMdew","magazine",0.01 },
+			{ "ItemSodaRbull","magazine",0.01 },
+			{ "ItemSodaOrangeSherbet","magazine",0.02 },
+			{ "ItemWatch","weapon",0.05 },
+			{ "ItemCompass","weapon",0.04 },
+			{ "ItemMap","weapon",0.03 },
+			{ "pistols","cfglootweapon",0.15 },
+			{ "ItemFlashlight","weapon",0.02 },
+			{ "ItemKnife","weapon",0.05 },
+			{ "ItemMatchbox_DZE","weapon",0.03 },
+			{ "","generic",0.31 },			
+			{ "","military",0.04 },
+			{ "","trash",0.03 },
+			{ "Binocular","weapon",0.02 },
+			{ "clothes","single",0.16 },
+			{ "specialclothes","single",0.02 },
+			{ "ItemDocument","magazine",0.01 }
+		};
 	};
-	
-	class Industrial : Default {
+	class Industrial: Default {
 		zombieChance = 0.4;
-		zombieClass[] = {"z_worker1", "z_worker2", "z_worker3"};
+		zombieClass[] = {"z_worker1","z_worker2","z_worker3"};
 		maxRoaming = 2;
 		lootChance = 0.4;
 		lootPos[] = {};
-		itemType[] = {{"ItemGenerator", "magazine"},  {"ItemFuelBarrelEmpty", "magazine"},  {"", "generic"}, {"", "trash"}, {"", "military"}, {"PartGeneric", "magazine"},  {"PartWheel", "magazine"},  {"PartFueltank", "magazine"},  {"PartEngine", "magazine"},  {"PartGlass", "magazine"},  {"PartVRotor", "magazine"},  {"ItemJerrycan", "magazine"},  {"WeaponHolder_ItemHatchet_DZE", "object"},  {"ItemKnife", "military"},  {"ItemToolbox", "weapon"},  {"ItemWire", "magazine"},  {"ItemTankTrap", "magazine"},  {"ItemKeyKit", "weapon"},  {"CinderBlocks", "magazine"},  {"MortarBucket", "magazine"}};
-		itemChance[] = {0.01, 0.01, 0.17, 0.25, 0.04, 0.04, 0.05, 0.02, 0.02, 0.04, 0.01, 0.04, 0.07, 0.07, 0.06, 0.01, 0.04, 0.01, 0.03, 0.01};
-		itemTypeSmall[] = {{"", "generic"}, {"", "trash"}, {"", "military"}, {"ItemKnife", "weapon"},  {"ItemKeyKit", "weapon"}};
-		itemChanceSmall[] = {0.5, 0.28, 0.14, 0.07, 0.01};
+		lootType[] = {
+			{"ItemGenerator","magazine",0.01},
+			{"ItemFuelBarrelEmpty","magazine",0.01},
+			{"","generic",0.17},
+			{"","trash",0.25},
+			{"","military",0.04},
+			{"PartGeneric","magazine",0.04},
+			{"PartWheel","magazine",0.05},
+			{"PartFueltank","magazine",0.02},
+			{"PartEngine","magazine",0.02},
+			{"PartGlass","magazine",0.04},
+			{"PartVRotor","magazine",0.01},
+			{"ItemJerrycan","magazine",0.04},
+			{"WeaponHolder_ItemHatchet_DZE","object",0.07},
+			{"ItemKnife","military",0.07},
+			{"ItemToolbox","weapon",0.06},
+			{"ItemWire","magazine",0.01},
+			{"ItemTankTrap","magazine",0.04},
+			{"ItemKeyKit","weapon",0.01},
+			{"CinderBlocks","magazine",0.03},
+			{"MortarBucket","magazine",0.01}
+		};
+		lootTypeSmall[] = {
+			{ "","generic",0.5 },
+			{ "","trash",0.28 },
+			{ "","military",0.14 },
+			{ "ItemKnife","weapon",0.07 },
+			{ "ItemKeyKit","weapon",0.01 }
+		};
 	};
-	
-	class IndustrialFuel : Default {
+	class IndustrialFuel: Default {
 		zombieChance = 0.4;
-		zombieClass[] = {"z_worker1", "z_worker2", "z_worker3"};
+		zombieClass[] = {"z_worker1","z_worker2","z_worker3"};
 		maxRoaming = 2;
 		lootChance = 0.4;
 		lootPos[] = {};
-		itemType[] = {{"ItemGenerator", "magazine"},  {"ItemFuelPump", "magazine"},  {"", "generic"}, {"", "trash"}, {"", "military"}, {"PartGeneric", "magazine"},  {"PartWheel", "magazine"},  {"PartFueltank", "magazine"},  {"PartEngine", "magazine"},  {"PartGlass", "magazine"},  {"PartVRotor", "magazine"},  {"ItemJerrycan", "magazine"},  {"WeaponHolder_ItemHatchet_DZE", "object"},  {"ItemKnife", "military"},  {"ItemToolbox", "weapon"},  {"ItemWire", "magazine"},  {"ItemTankTrap", "magazine"},  {"ItemKeyKit", "weapon"}};
-		itemChance[] = {0.01, 0.01, 0.18, 0.28, 0.04, 0.04, 0.05, 0.02, 0.02, 0.04, 0.01, 0.04, 0.07, 0.07, 0.06, 0.01, 0.04, 0.01};
-		itemTypeSmall[] = {{"", "generic"}, {"", "trash"}, {"", "military"}, {"ItemKnife", "weapon"},  {"ItemKeyKit", "weapon"}};
-		itemChanceSmall[] = {0.5, 0.28, 0.14, 0.07, 0.01};
+		lootType[] = {
+			{"ItemGenerator","magazine",0.01},
+			{"fuel_pump_kit","magazine",0.01},
+			{"","generic",0.18},
+			{"","trash",0.28},
+			{"","military",0.04},
+			{"PartGeneric","magazine",0.04},
+			{"PartWheel","magazine",0.05},
+			{"PartFueltank","magazine",0.02},
+			{"PartEngine","magazine",0.02},
+			{"PartGlass","magazine",0.04},
+			{"PartVRotor","magazine",0.01},
+			{"ItemJerrycan","magazine",0.04},
+			{"WeaponHolder_ItemHatchet_DZE","object",0.07},
+			{"ItemKnife","military",0.07},
+			{"ItemToolbox","weapon",0.06},
+			{"ItemWire","magazine",0.01},
+			{"ItemTankTrap","magazine",0.04},
+			{"ItemKeyKit","weapon",0.01}
+		};
+		lootTypeSmall[] = {
+			{ "","generic",0.5 },
+			{ "","trash",0.28 },
+			{ "","military",0.14 },
+			{ "ItemKnife","weapon",0.07 },
+			{ "ItemKeyKit","weapon",0.01 }
+		};
 	};
-	
-	class Farm : Default {
+	class Farm: Default {
 		zombieChance = 0.3;
 		maxRoaming = 3;
-		zombieClass[] = {"zZombie_Base", "z_hunter", "z_hunter", "z_hunter", "z_villager1", "z_villager2", "z_villager3"};
+		zombieClass[] = {"zZombie_Base","z_hunter","z_hunter","z_hunter","z_villager1","z_villager2","z_villager3"};
 		lootChance = 0.5;
 		lootPos[] = {};
-		itemType[] = {{"ItemJerrycan", "magazine"},  {"", "generic"}, {"farmweapons", "cfglootweapon"},  {"", "trash"}, {"PartPlankPack", "magazine"},  {"WeaponHolder_ItemHatchet_DZE", "object"},  {"ItemFuelBarrelEmpty", "magazine"},  {"WeaponHolder_ItemMachete", "object"},  {"ItemFishingPole", "weapon"},  {"ItemLightBulb", "magazine"},  {"ItemSledgeHandle", "magazine"}};
-		itemChance[] = {0.05, 0.3, 0.18, 0.26, 0.06, 0.05, 0.01, 0.03, 0.02, 0.02, 0.02};
-		itemTypeSmall[] = {{"", "generic"}, {"", "trash"}, {"", "military"}, {"ItemLightBulb", "magazine"},  {"ItemSledgeHead", "magazine"}};
-		itemChanceSmall[] = {0.79, 0.14, 0.05, 0.01, 0.01};
+		lootType[] = {
+			{"ItemJerrycan","magazine",0.05},
+			{"","generic",0.3},
+			{"","trash",0.11},
+			{"PartPlankPack","magazine",0.06},
+			{"WeaponHolder_ItemHatchet_DZE","object",0.05},
+			{"ItemFuelBarrelEmpty","magazine",0.01},
+			{"WeaponHolder_ItemMachete","object",0.03},
+			{"ItemFishingPole","weapon",0.02},
+			{"ItemLightBulb","magazine",0.02},
+			{"ItemSledgeHandle","magazine",0.02},
+			{ "farmweapons", "cfglootweapon", 0.15}
+		};
+		lootTypeSmall[] = {
+			{ "","generic", 0.79},
+			{ "","trash",0.14 },
+			{ "","military",0.05},
+			{ "ItemLightBulb","magazine",0.01},
+			{ "ItemSledgeHead","magazine",0.01}
+		};
 	};
-	
-	class Supermarket : Default {
+	class Supermarket: Default {
 		lootChance = 0.6;
 		minRoaming = 2;
 		maxRoaming = 6;
 		zombieChance = 0.3;
-		zombieClass[] = {"zZombie_Base", "zZombie_Base", "z_teacher", "z_suit1", "z_suit2"};
-		itemType[] = {{"ItemWatch", "generic"},  {"ItemCompass", "generic"},  {"ItemMap", "weapon"},  {"pistols", "cfglootweapon"},  {"ItemFlashlight", "generic"},  {"ItemKnife", "generic"},  {"ItemMatchbox_DZE", "generic"},  {"", "generic"}, {"shotgunsingleshot", "cfglootweapon"},  {"backpacks", "backpack"},  {"tents", "single"},  {"", "food"}, {"", "trash"}, {"Binocular", "weapon"},  {"PartPlywoodPack", "magazine"}};
-		itemChance[] = {0.07, 0.02, 0.04, 0.04, 0.01, 0.02, 0.04, 0.04, 0.04, 0.07, 0.01, 0.3, 0.23, 0.05, 0.02};
-		itemTypeSmall[] = {{"ItemSodaMdew", "magazine"},  {"ItemSodaRbull", "magazine"},  {"ItemSodaOrangeSherbet", "magazine"},  {"ItemWatch", "weapon"},  {"ItemCompass", "weapon"},  {"ItemMap", "weapon"},  {"pistols", "cfglootweapon"},  {"ItemFlashlight", "weapon"},  {"ItemKnife", "weapon"},  {"ItemMatchbox_DZE", "weapon"},  {"", "generic"}, {"", "food"}, {"", "trash"}, {"Binocular", "weapon"},  {"ItemMixOil", "magazine"}};
-		itemChanceSmall[] = {0.01, 0.01, 0.03, 0.07, 0.03, 0.05, 0.08, 0.01, 0.02, 0.04, 0.21, 0.24, 0.16, 0.02, 0.02};
+		zombieClass[] = {"zZombie_Base","zZombie_Base","z_teacher","z_suit1","z_suit2"};
+		lootType[] = {
+			{"ItemSodaMdew","magazine",0.01},
+			{"ItemSodaRbull","magazine",0.01},
+			{"ItemSodaOrangeSherbet","magazine",0.03},
+			{"ItemWatch","generic",0.07},
+			{"ItemCompass","generic",0.02},
+			{"ItemMap","weapon",0.04},
+			{"ItemFlashlight","generic",0.01},
+			{"ItemKnife","generic",0.02},
+			{"ItemMatchbox_DZE","generic",0.04},
+			{"","generic",0.04},
+			{"backpacks","backpacks",0.07},
+			{"tents","tents",0.01},
+			{"","food",0.3},
+			{"","trash",0.17},
+			{"Binocular","weapon",0.05},
+			{"PartPlywoodPack","magazine",0.02},
+			{ "pistols", "cfglootweapon", 0.04},
+			{ "shotgunsingleshot", "cfglootweapon", 0.04}
+		};
+		lootTypeSmall[] = {
+			{ "ItemSodaMdew","magazine",0.01 },
+			{ "ItemSodaRbull","magazine",0.01 },
+			{ "ItemSodaOrangeSherbet","magazine",0.03 },
+			{ "ItemWatch","weapon",0.07 },
+			{ "ItemCompass","weapon",0.03 },
+			{ "ItemMap","weapon",0.05 },
+			{ "pistols","cfglootweapon",0.08 },
+			{ "ItemFlashlight","weapon",0.01 },
+			{ "ItemKnife","weapon",0.02 },
+			{ "ItemMatchbox_DZE","weapon",0.04 },
+			{ "","generic",0.21 },
+			{ "","food",0.24 },
+			{ "","trash",0.16 },
+			{ "Binocular","weapon",0.02 },
+			{ "ItemMixOil", "magazine",0.02}
+		};
 	};
-	
-	class HeliCrash : Default {
+	class HeliCrash: Default {
 		zombieChance = 0.4;
 		maxRoaming = 2;
 		zombieClass[] = {"z_soldier_pilot"};
 		lootChance = 0.5;
 		lootPos[] = {};
-		itemType[] = {{"assaultrifles", "cfglootweapon"},  {"submachinegun", "cfglootweapon"},  {"sniperrifles", "cfglootweapon"},  {"machineguns", "cfglootweapon"},  {"", "military"}, {"", "medical"}, {"MedBox0", "object"},  {"NVGoggles", "weapon"},  {"AmmoBoxSmall_556", "object"},  {"AmmoBoxSmall_762", "object"},  {"militaryclothes", "single"},  {"militaryammo", "single"}};
-		itemChance[] = {0.1, 0.04, 0.07, 0.06, 0.3, 0.18, 0.02, 0.05, 0.03, 0.03, 0.05, 0.06};
+		lootType[] = {
+			{ "assaultrifles", "cfglootweapon", 0.10 },
+			{ "submachinegun", "cfglootweapon", 0.04 },
+			{ "sniperrifles", "cfglootweapon", 0.07 },
+			{ "machineguns", "cfglootweapon", 0.06 },
+			{"","military",0.3},
+			{"","medical",0.18},
+			{"MAAWS","weapon",0.02},
+			{"MedBox0","object",0.05},
+			{"NVGoggles","weapon",0.01},
+			{"AmmoBoxSmall_556","object",0.03},
+			{"AmmoBoxSmall_762","object",0.03},
+			{"militaryclothes","militaryclothes",0.05},
+			{"militaryammo","militaryammo",0.06}
+		};
 	};
-	
-	class HeliCrash_No50s : Default {
+	class HeliCrash_No50s: Default {
 		zombieChance = 0.4;
 		maxRoaming = 2;
 		zombieClass[] = {"z_soldier_pilot"};
 		lootChance = 0.5;
 		lootPos[] = {};
-		itemType[] = {{"assaultrifles", "cfglootweapon"},  {"submachinegun", "cfglootweapon"},  {"sniperrifles", "cfglootweapon"},  {"machineguns", "cfglootweapon"},  {"", "military"}, {"", "medical"}, {"MedBox0", "object"},  {"NVGoggles", "weapon"},  {"AmmoBoxSmall_556", "object"},  {"AmmoBoxSmall_762", "object"},  {"militaryclothes", "single"},  {"militaryammo", "single"}};
-		itemChance[] = {0.09, 0.03, 0.05, 0.05, 0.35, 0.18, 0.05, 0.01, 0.03, 0.03, 0.05, 0.06};
+		lootType[] = {
+			{ "assaultrifles", "cfglootweapon", 0.10 },
+			{ "submachinegun", "cfglootweapon", 0.04 },
+			{ "sniperrifles", "cfglootweapon", 0.07 },
+			{ "machineguns", "cfglootweapon", 0.06 },
+			{ "", "military", 0.3 },
+			{ "", "medical", 0.18 },
+			{ "MAAWS", "weapon", 0.02 },
+			{ "MedBox0", "object", 0.05 },
+			{ "NVGoggles", "weapon", 0.01 },
+			{ "AmmoBoxSmall_556", "object", 0.03 },
+			{ "AmmoBoxSmall_762", "object", 0.03 },
+			{ "militaryclothes", "militaryclothes", 0.05 },
+			{ "militaryammo", "militaryammo", 0.06 }
+		};
 	};
-	
-	class Hospital : Default {
+	class Hospital: Default {
 		zombieChance = 0.4;
 		minRoaming = 2;
 		maxRoaming = 6;
-		zombieClass[] = {"z_doctor", "z_doctor", "z_doctor"};
+		zombieClass[] = {"z_doctor","z_doctor","z_doctor"};
 		lootChance = 1;
 		lootPos[] = {};
-		itemType[] = {{"", "trash"}, {"", "hospital"}, {"MedBox0", "object"}};
-		itemChance[] = {0.1, 0.7, 0.2};
-		itemTypeSmall[] = {{"", "trash"}, {"", "hospital"}};
-		itemChanceSmall[] = {0.1, 0.9};
+		lootType[] = {
+			{"","trash",0.1},
+			{"","hospital",0.7},
+			{"MedBox0","object",0.2}
+		};
+		lootTypeSmall[] = {
+			{ "","trash",0.1 },
+			{ "","hospital",0.9 }
+		};
 	};
-	
-	class Military : Default {
+	class Military: Default {
 		zombieChance = 0.3;
 		maxRoaming = 6;
-		zombieClass[] = {"z_soldier", "z_soldier_heavy", "z_policeman"};
+		zombieClass[] = {"z_soldier","z_soldier_heavy","z_policeman"};
 		lootChance = 0.4;
 		lootPos[] = {};
-		itemType[] = {{"pistols", "cfglootweapon"},  {"assaultrifles", "cfglootweapon"},  {"sniperrifles", "cfglootweapon"},  {"shotgunsingleshot", "cfglootweapon"},  {"submachinegun", "cfglootweapon"},  {"Binocular", "weapon"},  {"ItemFlashlightRed", "military"},  {"ItemKnife", "military"},  {"ItemGPS", "weapon"},  {"ItemMap", "military"},  {"militarybackpacks", "backpack"},  {"", "medical"}, {"", "generic"}, {"", "military"}, {"ItemEtool", "weapon"},  {"ItemSandbag", "magazine"},  {"machineguns", "cfglootweapon"}};
-		itemChance[] = {0.04, 0.13, 0.04, 0.06, 0.07, 0.03, 0.04, 0.01, 0.01, 0.02, 0.05, 0.03, 0.1, 0.3, 0.02, 0.02, 0.03};
-		itemTypeSmall[] = {{"pistols", "cfglootweapon"},  {"Binocular", "weapon"},  {"ItemFlashlightRed", "weapon"},  {"ItemKnife", "weapon"},  {"ItemGPS", "weapon"},  {"ItemMap", "weapon"},  {"", "medical"}, {"", "generic"}, {"", "military"}, {"submachinegun", "cfglootweapon"},  {"ItemEtool", "weapon"}};
-		itemChanceSmall[] = {0.15, 0.02, 0.03, 0.04, 0.02, 0.02, 0.09, 0.34, 0.26, 0.02, 0.01};
+		lootType[] = {
+			{ "pistols", "cfglootweapon", 0.04},
+			{ "assaultrifles", "cfglootweapon", 0.13 },
+			{ "sniperrifles", "cfglootweapon", 0.04 },
+			{ "shotgunsingleshot", "cfglootweapon", 0.06 },
+			{ "submachinegun", "cfglootweapon", 0.07 },
+			{"Binocular","weapon",0.03},
+			{"ItemFlashlightRed","military",0.04},
+			{"ItemKnife","military",0.01},
+			{"ItemGPS","weapon",0.01},
+			{"ItemMap","military",0.02},
+			{"militarybackpacks","militarybackpacks",0.05},
+			{"","medical",0.03},
+			{"","generic",0.1},
+			{"","military",0.3},
+			{"ItemEtool","weapon",0.02},
+			{"ItemSandbag","magazine",0.02},
+			{ "machineguns", "cfglootweapon", 0.03 }
+		};
+		lootTypeSmall[] = {
+			{ "pistols", "cfglootweapon", 0.14 },
+			{ "Binocular", "weapon", 0.05 },
+			{ "ItemFlashlightRed", "weapon", 0.03 },
+			{ "ItemKnife", "weapon", 0.04 },
+			{ "ItemGPS", "weapon", 0.02 },
+			{ "", "medical", 0.12 },
+			{ "", "generic", 0.22 },
+			{ "", "military", 0.35 },
+			{ "ItemEtool", "weapon", 0.03 }
+		};
 	};
-	
-	class MilitaryIndustrial : Default {
+	class MilitaryIndustrial: Default {
 		zombieChance = 0.3;
 		maxRoaming = 6;
-		zombieClass[] = {"z_soldier", "z_soldier_heavy", "z_policeman", "z_soldier", "z_soldier_heavy", "z_policeman", "z_worker1", "z_worker2", "z_worker3"};
+		zombieClass[] = {"z_soldier","z_soldier_heavy","z_policeman","z_soldier","z_soldier_heavy","z_policeman","z_worker1","z_worker2","z_worker3"};
 		lootChance = 0.4;
 		lootPos[] = {};
-		itemType[] = {{"pistols", "cfglootweapon"},  {"assaultrifles", "cfglootweapon"},  {"PartGeneric", "magazine"},  {"sniperrifles", "cfglootweapon"},  {"shotgunsingleshot", "cfglootweapon"},  {"ItemGenerator", "magazine"},  {"submachinegun", "cfglootweapon"},  {"PartWheel", "magazine"},  {"Binocular", "weapon"},  {"ItemFlashlightRed", "military"},  {"ItemKnife", "military"},  {"ItemGPS", "weapon"},  {"PartVRotor", "magazine"},  {"militarybackpacks", "backpack"},  {"", "medical"}, {"", "generic"}, {"", "military"}, {"ItemEtool", "weapon"},  {"ItemSandbag", "magazine"},  {"ItemFuelBarrelEmpty", "magazine"},  {"ItemFuelPump", "magazine"},  {"machineguns", "cfglootweapon"}};
-		itemChance[] = {0.02, 0.05, 0.03, 0.01, 0.05, 0.01, 0.05, 0.02, 0.01, 0.03, 0.04, 0.01, 0.01, 0.03, 0.05, 0.35, 0.07, 0.03, 0.02, 0.03, 0.01, 0.01};
-		itemTypeSmall[] = {{"pistols", "cfglootweapon"},  {"Binocular", "weapon"},  {"ItemFlashlightRed", "weapon"},  {"ItemKnife", "weapon"},  {"ItemGPS", "weapon"},  {"", "medical"}, {"", "generic"}, {"", "military"}, {"submachinegun", "cfglootweapon"},  {"ItemEtool", "weapon"}};
-		itemChanceSmall[] = {0.12, 0.05, 0.03, 0.04, 0.02, 0.02, 0.09, 0.34, 0.26, 0.03};
+		lootType[] = {
+			{ "pistols", "cfglootweapon", 0.02 },
+			{ "assaultrifles", "cfglootweapon", 0.05 },
+			{ "PartGeneric", "magazine", 0.03 },
+			{ "sniperrifles", "cfglootweapon", 0.01 },
+			{ "shotgunsingleshot", "cfglootweapon", 0.05 },
+			{ "ItemGenerator", "magazine", 0.01 },
+			{ "submachinegun", "cfglootweapon", 0.05 },
+			{"PartGeneric","magazine",0.03},
+			{"ItemGenerator","magazine",0.01},
+			{"PartWheel","magazine",0.02},
+			{"Binocular","weapon",0.01},
+			{"ItemFlashlightRed","military",0.03},
+			{"ItemKnife","military",0.04},
+			{"ItemGPS","weapon",0.01},
+			{"PartVRotor","magazine",0.01},
+			{"militarybackpacks","militarybackpacks",0.03},
+			{"","medical",0.05},
+			{"","generic",0.35},
+			{"","military",0.07},
+			{"ItemEtool","weapon",0.03},
+			{"ItemSandbag","magazine",0.02},
+			{"ItemFuelBarrelEmpty","magazine",0.03},
+			{"fuel_pump_kit","magazine",0.01},
+			{ "machineguns", "cfglootweapon", 0.01 }
+		};
+		lootTypeSmall[] = {
+			{ "pistols", "cfglootweapon", 0.14 },
+			{ "Binocular", "weapon", 0.05 },
+			{ "ItemFlashlightRed", "weapon", 0.03 },
+			{ "ItemKnife", "weapon", 0.04 },
+			{ "ItemGPS", "weapon", 0.02 },
+			{ "", "medical", 0.12 },
+			{ "", "generic", 0.22 },
+			{ "", "military", 0.35 },
+			{ "ItemEtool", "weapon", 0.03 }
+		};
 	};
-	
-	class IndustrialMilitary : Default {
+	class IndustrialMilitary: Default {
 		zombieChance = 0.4;
 		maxRoaming = 6;
-		zombieClass[] = {"z_soldier", "z_soldier_heavy", "z_policeman", "z_soldier", "z_soldier_heavy", "z_policeman", "z_worker1", "z_worker2", "z_worker3"};
+		zombieClass[] = {"z_soldier","z_soldier_heavy","z_policeman","z_soldier","z_soldier_heavy","z_policeman","z_worker1","z_worker2","z_worker3"};
 		lootChance = 0.5;
 		lootPos[] = {};
-		itemType[] = {{"pistols", "cfglootweapon"},  {"assaultrifles", "cfglootweapon"},  {"PartGeneric", "magazine"},  {"sniperrifles", "cfglootweapon"},  {"shotgunsingleshot", "cfglootweapon"},  {"ItemGenerator", "magazine"},  {"submachinegun", "cfglootweapon"},  {"PartWheel", "magazine"},  {"Binocular", "weapon"},  {"ItemFlashlightRed", "military"},  {"ItemKnife", "military"},  {"ItemGPS", "weapon"},  {"PartVRotor", "magazine"},  {"PartFueltank", "magazine"},  {"PartEngine", "magazine"},  {"PartGlass", "magazine"},  {"militarybackpacks", "backpack"},  {"", "medical"}, {"", "generic"}, {"", "military"}, {"ItemEtool", "weapon"},  {"ItemSandbag", "magazine"},  {"ItemFuelBarrelEmpty", "magazine"},  {"ItemFuelPump", "magazine"},  {"machineguns", "cfglootweapon"}};
-		itemChance[] = {0.02, 0.05, 0.03, 0.01, 0.05, 0.01, 0.05, 0.02, 0.01, 0.03, 0.04, 0.01, 0.01, 0.03, 0.04, 0.05, 0.03, 0.05, 0.25, 0.07, 0.03, 0.02, 0.03, 0.01, 0.01};
-		itemTypeSmall[] = {{"pistols", "cfglootweapon"},  {"Binocular", "weapon"},  {"ItemFlashlightRed", "weapon"},  {"ItemKnife", "weapon"},  {"ItemGPS", "weapon"},  {"", "medical"}, {"", "generic"}, {"", "military"}, {"submachinegun", "cfglootweapon"},  {"ItemEtool", "weapon"}};
-		itemChanceSmall[] = {0.12, 0.05, 0.03, 0.04, 0.02, 0.02, 0.09, 0.34, 0.26, 0.03};
+		lootType[] = {
+			{ "pistols", "cfglootweapon", 0.02 },
+			{ "assaultrifles", "cfglootweapon", 0.05 },
+			{ "PartGeneric", "magazine", 0.03 },
+			{ "sniperrifles", "cfglootweapon", 0.01 },
+			{ "shotgunsingleshot", "cfglootweapon", 0.05 },
+			{ "ItemGenerator", "magazine", 0.01 },
+			{ "submachinegun", "cfglootweapon", 0.05 },
+			{"PartGeneric","magazine",0.03},
+			{"ItemGenerator","magazine",0.01},
+			{"PartWheel","magazine",0.02},
+			{"Binocular","weapon",0.01},
+			{"ItemFlashlightRed","military",0.03},
+			{"ItemKnife","military",0.04},
+			{"ItemGPS","weapon",0.01},
+			{"PartVRotor","magazine",0.01},
+			{"PartFueltank","magazine",0.03},
+			{"PartEngine","magazine",0.04},
+			{"PartGlass","magazine",0.05},
+			{"militarybackpacks","militarybackpacks",0.03},
+			{"","medical",0.05},
+			{"","generic",0.25},
+			{"","military",0.07},
+			{"ItemEtool","weapon",0.03},
+			{"ItemSandbag","magazine",0.02},
+			{"ItemFuelBarrelEmpty","magazine",0.03},
+			{"fuel_pump_kit","magazine",0.01},
+			{"machineguns","cfglootweapon",0.01}
+		};
+		lootTypeSmall[] = {
+			{ "pistols", "cfglootweapon", 0.14 },
+			{ "Binocular", "weapon", 0.05 },
+			{ "ItemFlashlightRed", "weapon", 0.03 },
+			{ "ItemKnife", "weapon", 0.04 },
+			{ "ItemGPS", "weapon", 0.02 },
+			{ "", "medical", 0.12 },
+			{ "", "generic", 0.22 },
+			{"","military",0.35},
+			{"ItemEtool","weapon",0.03}
+		};
 	};
-	
-	class MilitarySpecial : Default {
+	class MilitarySpecial: Default {
 		zombieChance = 0.4;
 		minRoaming = 2;
 		maxRoaming = 6;
 		zombieClass[] = {"z_soldier_heavy"};
 		lootChance = 0.4;
 		lootPos[] = {};
-		itemType[] = {{"assaultrifles", "cfglootweapon"},  {"machineguns", "cfglootweapon"},  {"pistols", "cfglootweapon"},  {"sniperrifles", "cfglootweapon"},  {"militaryshotguns", "cfglootweapon"},  {"submachinegun", "cfglootweapon"},  {"AmmoBoxSmall_556", "object"},  {"AmmoBoxSmall_762", "object"},  {"Binocular", "weapon"},  {"ItemFlashlightRed", "military"},  {"ItemKnife", "military"},  {"ItemGPS", "weapon"},  {"ItemMap", "military"},  {"Binocular_Vector", "military"},  {"militarybackpacks", "backpack"},  {"", "medical"}, {"", "generic"}, {"", "military"}, {"machinegunammo", "single"},  {"militaryclothes", "single"},  {"NVGoggles", "weapon"}};
-		itemChance[] = {0.1, 0.04, 0.08, 0.03, 0.05, 0.06, 0.01, 0.02, 0.01, 0.02, 0.01, 0.01, 0.01, 0.01, 0.04, 0.08, 0.3, 0.01, 0.05, 0.05, 0.01};
-		itemTypeSmall[] = {
-			{"pistols", "cfglootweapon"},  {"AmmoBoxSmall_556", "object"},  {"AmmoBoxSmall_762", "object"},  {"Binocular", "weapon"},  {"ItemFlashlightRed", "military"},  {"ItemKnife", "military"},  {"ItemGPS", "weapon"},  {"ItemMap", "weapon"},  {"Binocular_Vector", "weapon"},  {"", "medical"}, 
- {"", "generic"}, 
- {"", "military"}, 
- {"5Rnd_86x70_L115A1", "magazine"},  {"machinegunammoexpl", "single"},  {"militaryclothes", "single"},  {"NVGoggles", "weapon"},  {"100Rnd_762x54_PK", "magazine"}};
-		itemChanceSmall[] = {0.1, 0.02, 0.02, 0.02, 0.01, 0.02, 0.01, 0.03, 0.01, 0.06, 0.15, 0.33, 0.02, 0.02, 0.05, 0.02, 0.05, 0.01, 0.01};
+		lootType[] = {
+			{ "assaultrifles", "cfglootweapon", 0.1 },
+			{ "machineguns", "cfglootweapon", 0.04 },
+			{ "pistols", "cfglootweapon", 0.08 },
+			{ "sniperrifles", "cfglootweapon", 0.03 },
+			{ "militaryshotguns", "cfglootweapon", 0.05 },
+			{ "submachinegun", "cfglootweapon", 0.06 },
+			{"AmmoBoxSmall_556","object",0.01},
+			{"AmmoBoxSmall_762","object",0.02},
+			{"Binocular","weapon",0.01},
+			{"ItemFlashlightRed","military",0.02},
+			{"ItemKnife","military",0.01},
+			{"ItemGPS","weapon",0.01},
+			{"ItemMap","military",0.01},
+			{"Binocular_Vector","military",0.01},
+			{"militarybackpacks","militarybackpacks",0.04},
+			{"","medical",0.08},
+			{"","generic",0.3},
+			{"","military",0.01},
+			{"machinegunammo","machinegunammo",0.05},
+			{"militaryclothes","militaryclothes",0.05},
+			{"NVGoggles","weapon",0.01}
+		};
+		lootTypeSmall[] = {
+			{ "pistols","cfglootweapon",0.10 },
+			{ "AmmoBoxSmall_556","object",0.02 },
+			{ "AmmoBoxSmall_762","object",0.02 },
+			{ "Binocular","weapon",0.02 },
+			{ "ItemFlashlightRed","military",0.01 },
+			{ "ItemKnife","military",0.02 },
+			{ "ItemGPS","weapon",0.02 },
+			{ "ItemMap","weapon",0.01 },
+			{ "Binocular_Vector","weapon",0.03},
+			{ "","medical",0.08},
+			{ "","generic",0.15},
+			{ "","military",0.33 },
+			{ "5Rnd_86x70_L115A1","magazine",0.03},
+			{ "10Rnd_127x99_m107","magazine",0.02},
+			{ "machinegunammoexpl","single",0.02 },
+			{ "militaryclothes","single",0.05 },
+			{ "NVGoggles","weapon",0.04 },
+			{ "100Rnd_762x54_PK","magazine",0.02 }
+		};
 	};
-	
-	class Hunting : Default {
+	class Hunting: Default {
 		zombieChance = 0.4;
 		minRoaming = 1;
 		maxRoaming = 3;
-		zombieClass[] = {"z_hunter", "z_hunter", "z_hunter"};
+		zombieClass[] = {"z_hunter","z_hunter","z_hunter"};
 		lootChance = 1;
 		lootPos[] = {};
-		itemType[] = {{"ItemMap", "weapon"},  {"ItemFlashlight", "generic"},  {"ItemKnife", "generic"},  {"ItemMatchbox_DZE", "generic"},  {"farmweapons", "cfglootweapon"},  {"", "military"}, 
- {"WeaponHolder_ItemMachete", "object"},  {"", "hunter"}};
-		itemChance[] = {0.02, 0.01, 0.01, 0.03, 0.03, 0.38, 0.02, 0.5};
-		itemTypeSmall[] = {{"ItemMap", "weapon"},  {"ItemFlashlight", "weapon"},  {"ItemKnife", "weapon"},  {"ItemMatchbox_DZE", "weapon"},  {"", "military"}, {"", "hunter"}};
-		itemChanceSmall[] = {0.02, 0.02, 0.02, 0.04, 0.4, 0.5};
+		lootType[] = {
+			{"ItemMap","weapon",0.02},
+			{"ItemFlashlight","generic",0.01},
+			{"ItemKnife","generic",0.01},
+			{"ItemMatchbox_DZE","generic",0.03},
+			{ "farmweapons", "cfglootweapon", 0.03 },
+			{"","military",0.38},
+			{"WeaponHolder_ItemMachete","object",0.02},
+			{"","hunter",0.5}
+		};
+		lootTypeSmall[] =	{
+			{"ItemMap","weapon",0.02},
+			{"ItemFlashlight","weapon",0.02},
+			{"ItemKnife","weapon",0.02},
+			{"ItemMatchbox_DZE","weapon",0.04},
+			{"","military",0.4},
+			{"","hunter",0.5}
+		};
 	};
-	
-	class DynamicDebris : Default {
+	class DynamicDebris: Default
+	{
 		lootChance = 0.4;
 		minRoaming = 0;
 		maxRoaming = 2;
 		zombieChance = 0.3;
-		zombieClass[] = {"zZombie_Base", "zZombie_Base", "z_teacher", "z_suit1", "z_suit2"};
-		itemType[] = {{"ItemWatch", "generic"},  {"ItemCompass", "generic"},  {"ItemMap", "weapon"},  {"Makarov", "weapon"},  {"Colt1911", "weapon"},  {"ItemFlashlight", "generic"},  {"ItemKnife", "generic"},  {"ItemMatchbox_DZE", "generic"},  {"ItemToolbox", "weapon"},  {"", "generic"}, {"", "food"}, {"PartGeneric", "magazine"},  {"PartWheel", "magazine"},  {"PartFueltank", "magazine"},  {"PartEngine", "magazine"},  {"PartGlass", "magazine"},  {"WeaponHolder_ItemJerrycan", "object"}};
-		itemChance[] = {0.191, 0.012, 0.062, 0.024, 0.024, 0.055, 0.055, 0.055, 0.022, 0.169, 0.055, 0.066, 0.055, 0.033, 0.011, 0.078, 0.033};
+		zombieClass[] = {"zZombie_Base","zZombie_Base","z_teacher","z_suit1","z_suit2"};
+		lootType[] = {
+			{ "ItemWatch", "generic", 0.19 },
+			{ "ItemCompass", "generic", 0.01 },
+			{ "ItemMap", "weapon", 0.06 },
+			{ "Makarov", "weapon", 0.02 },
+			{ "Colt1911", "weapon", 0.02 },
+			{ "ItemFlashlight", "generic", 0.06 },
+			{ "ItemKnife", "generic", 0.06 },
+			{ "ItemMatchbox_DZE", "generic", 0.06 },
+			{ "ItemToolbox", "weapon", 0.02 },
+			{ "", "generic", 0.17 },
+			{ "", "food", 0.06 },
+			{ "PartGeneric", "magazine", 0.07 },
+			{ "PartWheel", "magazine", 0.06 },
+			{ "PartFueltank", "magazine", 0.03 },
+			{ "PartEngine", "magazine", 0.01 },
+			{ "PartGlass", "magazine", 0.08 },
+			{ "WeaponHolder_ItemJerrycan", "object", 0.03 }
+		};
 	};
-	
-	class DynamicDebrisMilitary : Default {
+	class DynamicDebrisMilitary: Default
+	{
 		lootChance = 0.4;
 		minRoaming = 0;
 		maxRoaming = 2;
 		zombieChance = 0.3;
-		zombieClass[] = {"z_soldier_pilot", "z_soldier_heavy"};
-		itemType[] = {{"ItemEtool", "weapon"},  {"ItemSandbag", "magazine"},  {"", "military"}, {"ItemWatch", "generic"},  {"ItemCompass", "generic"},  {"ItemMap", "weapon"},  {"MakarovSD", "weapon"},  {"Colt1911", "weapon"},  {"ItemFlashlight", "generic"},  {"ItemKnife", "generic"},  {"ItemMatchbox_DZE", "generic"},  {"ItemToolbox", "weapon"},  {"", "generic"}, {"", "food"}, {"PartGeneric", "magazine"},  {"PartWheel", "magazine"},  {"PartFueltank", "magazine"},  {"PartEngine", "magazine"},  {"PartGlass", "magazine"},  {"PartVRotor", "magazine"},  {"WeaponHolder_ItemJerrycan", "object"}};
-		itemChance[] = {0.05, 0.1, 0.08, 0.1, 0.02, 0.05, 0.01, 0.02, 0.01, 0.05, 0.05, 0.02, 0.15, 0.05, 0.06, 0.05, 0.03, 0.02, 0.03, 0.02, 0.03};
+		zombieClass[] = {"z_soldier_pilot","z_soldier_heavy"};
+		lootType[] = {
+			{ "ItemEtool", "weapon", 0.05 },
+			{ "ItemSandbag", "magazine", 0.1 },
+			{ "", "military", 0.08 },
+			{ "ItemWatch", "generic", 0.1 },
+			{ "ItemCompass", "generic", 0.02 },
+			{ "ItemMap", "weapon", 0.05 },
+			{ "MakarovSD", "weapon", 0.01 },
+			{ "Colt1911", "weapon", 0.02 },
+			{ "ItemFlashlight", "generic", 0.01 },
+			{ "ItemKnife", "generic", 0.05 },
+			{ "ItemMatchbox_DZE", "generic", 0.05 },
+			{ "ItemToolbox", "weapon", 0.02 },
+			{ "", "generic", 0.15 },
+			{ "", "food", 0.05 },
+			{ "PartGeneric", "magazine", 0.06 },
+			{ "PartWheel", "magazine", 0.05 },
+			{ "PartFueltank", "magazine", 0.03 },
+			{ "PartEngine", "magazine", 0.02 },
+			{ "PartGlass", "magazine", 0.03 },
+			{ "PartVRotor", "magazine", 0.02 },
+			{ "WeaponHolder_ItemJerrycan", "object", 0.03 }
+		};
 	};
-	
-	class SupplyDrop : Default {
+	class SupplyDrop: Default {
 		zombieChance = 1;
 		maxRoaming = 3;
-		zombieClass[] = {"zZombie_Base", "z_hunter", "z_hunter", "z_hunter", "z_villager1", "z_villager2", "z_villager3", "z_doctor", "z_soldier_pilot", "z_soldier_heavy"};
+		zombieClass[] = {"zZombie_Base","z_hunter","z_hunter","z_hunter","z_villager1","z_villager2","z_villager3","z_doctor","z_soldier_pilot","z_soldier_heavy"};
 		lootChance = 1;
 		lootPos[] = {};
-		itemType[] = {{"PartPlywoodPack", "magazine"},  {"PartPlankPack", "magazine"},  {"CinderBlocks", "magazine"},  {"MortarBucket", "magazine"},  {"bulk_PartGeneric", "magazine"},  {"bulk_ItemSandbag", "magazine"},  {"bulk_ItemTankTrap", "magazine"},  {"ItemSledge", "weapon"}};
-		itemChance[] = {0.1, 0.2, 0.1, 0.1, 0.2, 0.1, 0.1, 0.1};
+		lootType[] = {
+			{ "PartPlywoodPack", "magazine", 0.1 },
+			{ "PartPlankPack", "magazine", 0.2 },
+			{ "CinderBlocks", "magazine", 0.1 },
+			{ "MortarBucket", "magazine", 0.1 },
+			{ "bulk_PartGeneric", "magazine", 0.2 },
+			{ "bulk_ItemSandbag", "magazine", 0.1 },
+			{ "bulk_ItemTankTrap", "magazine", 0.1 },
+			{ "ItemSledge", "weapon", 0.1 }
+		};
 	};
-	
-	class MassGrave : Default {
+	class MassGrave: Default {
 		zombieChance = 1;
 		maxRoaming = 3;
-		zombieClass[] = {"zZombie_Base", "z_hunter", "z_hunter", "z_hunter", "z_villager1", "z_villager2", "z_villager3", "z_doctor", "z_soldier_pilot", "z_soldier_heavy"};
+		zombieClass[] = {"zZombie_Base","z_hunter","z_hunter","z_hunter","z_villager1","z_villager2","z_villager3","z_doctor","z_soldier_pilot","z_soldier_heavy"};
 		lootChance = 1;
 		lootPos[] = {};
-		itemType[] = {{M16A2, "weapon"}, {M16A2GL, "weapon"}, {M249_EP1_DZ, "weapon"}, {M9SD, "weapon"}, {"Pecheneg_DZ", "weapon"},  {AK_74, "weapon"}, {"M4A1_Aim", "weapon"},  {"AKS_74_kobra", "weapon"},  {AKS_74_U, "weapon"}, {AK_47_M, "weapon"}, {M24, "weapon"}, {SVD_CAMO, "weapon"}, {M1014, "weapon"}, {"BAF_LRR_scoped", "weapon"},  {M4SPR, "weapon"}, {M4A1, "weapon"}, {M14_EP1, "weapon"}, {UZI_EP1, "weapon"}, {"Remington870_lamp", "weapon"},  {"glock17_EP1", "weapon"},  {M240_DZ, "weapon"}, {"M4A1_AIM_SD_camo", "weapon"},  {M16A4_ACG, "weapon"}, {"M4A1_HWS_GL_camo", "weapon"},  {"Mk_48_DZ", "weapon"},  {M4A3_CCO_EP1, "weapon"}, {"AmmoBoxSmall_556", "object"},  {"AmmoBoxSmall_762", "object"},  {"Binocular", "weapon"},  {"ItemFlashlightRed", "military"},  {"ItemKnife", "military"},  {"ItemGPS", "weapon"},  {"ItemMap", "military"},  {"Binocular_Vector", "military"},  {"DZ_ALICE_Pack_EP1", "object"},  {"DZ_TK_Assault_Pack_EP1", "object"},  {"DZ_British_ACU", "object"},  {"DZ_CivilBackpack_EP1", "object"},  {"DZ_Backpack_EP1", "object"},  {"DZ_LargeGunBag_EP1", "object"},  {"", "medical"}, {"", "generic"}, {"", "military"},  {"Sa58V_RCO_EP1", "weapon"},  {"Sa58V_CCO_EP1", "weapon"},  {"G36_C_SD_camo", "weapon"},  {M40A3, "weapon"}, {"100Rnd_762x54_PK", "magazine"},  {"", "militaryclothes"}, {"WeaponHolder_ItemMachete", "object"},  {"SCAR_H_LNG_Sniper_SD", "weapon"},  {"2000Rnd_762x51_M134", "magazine"},  {KSVK_DZE, "weapon"}, {"m240_scoped_EP1_DZE", "weapon"}};
-		itemChance[] = {0.03, 0.01, 0.01, 0.02, 0.01, 0.02, 0.01, 0.01, 0.02, 0.02, 0.01, 0.02, 0.01, 0.01, 0.01, 0.02, 0.03, 0.01, 0.02, 0.02, 0.01, 0.01, 0.01, 0.01, 0.01, 0.03, 0.03, 0.01, 0.02, 0.01, 0.01, 0.01, 0.01, 0.03, 0.02, 0.02, 0.02, 0.01, 0.01, 0.05, 0.05, 0.13, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.05, 0.02, 0.01, 0.01, 0.01, 0.01};
+		lootType[] = {
+			{ "M16A2", "weapon", 0.03 },
+			{ "M16A2GL", "weapon", 0.01 },
+			{ "M249_EP1_DZ", "weapon", 0.01 },
+			{ "M9SD", "weapon", 0.02 },
+			{ "Pecheneg_DZ", "weapon", 0.02 },
+			{ "PK_DZ", "weapon", 0.01 },
+			{ "AK_74", "weapon", 0.02 },
+			{ "M4A1_Aim", "weapon", 0.01 },
+			{ "AKS_74_kobra", "weapon", 0.01 },
+			{ "AKS_74_U", "weapon", 0.02 },
+			{ "AK_47_M", "weapon", 0.02 },
+			{ "M24", "weapon", 0.01 },
+			{ "SVD_CAMO", "weapon", 0.01 },
+			{ "M1014", "weapon", 0.02 },
+			{ "BAF_LRR_scoped", "weapon", 0.01 },
+			{ "M4SPR", "weapon", 0.01 },
+			{ "M4A1", "weapon", 0.01 },
+			{ "M14_EP1", "weapon", 0.02 },
+			{ "UZI_EP1", "weapon", 0.03 },
+			{ "Remington870_lamp", "weapon", 0.01 },
+			{ "glock17_EP1", "weapon", 0.02 },
+			{ "M240_DZ", "weapon", 0.02 },
+			{ "M4A1_AIM_SD_camo", "weapon", 0.01 },
+			{ "M16A4_ACG", "weapon", 0.01 },
+			{ "M4A1_HWS_GL_camo", "weapon", 0.01 },
+			{ "Mk_48_DZ", "weapon", 0.01 },
+			{ "M4A3_CCO_EP1", "weapon", 0.01 },
+			{ "AmmoBoxSmall_556", "object", 0.03 },
+			{ "AmmoBoxSmall_762", "object", 0.03 },
+			{ "Binocular", "weapon", 0.01 },
+			{ "ItemFlashlightRed", "military", 0.02 },
+			{ "ItemKnife", "military", 0.01 },
+			{ "ItemGPS", "weapon", 0.01 },
+			{ "ItemMap", "military", 0.01 },
+			{ "Binocular_Vector", "military", 0.01 },
+			{ "DZ_ALICE_Pack_EP1", "object", 0.03 },
+			{ "DZ_TK_Assault_Pack_EP1", "object", 0.02 },
+			{ "DZ_British_ACU", "object", 0.02 },
+			{ "DZ_CivilBackpack_EP1", "object", 0.02 },
+			{ "DZ_Backpack_EP1", "object", 0.01 },
+			{ "DZ_LargeGunBag_EP1", "object", 0.01 },
+			{ "", "medical", 0.05 },
+			{ "", "generic", 0.05 },
+			{ "", "military", 0.13 },
+			{ "PipeBomb", "magazine", 0.01 },
+			{ "Sa58V_RCO_EP1", "weapon", 0.01 },
+			{ "Sa58V_CCO_EP1", "weapon", 0.01 },
+			{ "G36_C_SD_camo", "weapon", 0.01 },
+			{ "M40A3", "weapon", 0.01 },
+			{ "100Rnd_762x54_PK", "magazine", 0.01 },
+			{ "", "militaryclothes", 0.05 },
+			{ "WeaponHolder_ItemMachete", "object", 0.02 },
+			{ "SCAR_H_LNG_Sniper_SD", "weapon", 0.01 },
+			{ "2000Rnd_762x51_M134", "magazine", 0.01 },
+			{ "KSVK_DZE", "weapon", 0.01 },
+			{ "m240_scoped_EP1_DZE", "weapon", 0.01 }
+		};
 	};
 	
-	#include "\dayz_epoch_b\CfgLootPos.hpp"
-
-	class Land_MBG_Garage_Single_A : Land_MBG_Garage_Single_B {};
-	class Land_MBG_Garage_Single_C : Land_MBG_Garage_Single_A {};
+#include "CfgBuildingPos.hpp"
 
 	class Land_MBG_GER_RHUS_4 : Residential {
 		zombieChance = 0.2;
@@ -399,64 +841,64 @@ class CfgBuildingLoot {
 
 	class Land_smd_ammostore2_open: MilitarySpecial {
 		lootPos[] = {
-			{2.32324, 3.56213, -1.98814}, //small
-			{0.478516, 5.21533, -1.98814}, //small
-			{-2.1748, 4.7135, -1.68814} //small
+			{2.32324, 3.56213, -1.98814},
+			{0.478516, 5.21533, -1.98814},
+			{-2.1748, 4.7135, -1.68814}
 		};
 		lootPosZombie[] = {{0.00878906, -2.6001, -2.88206}};
 	};
 	class Land_smd_fuelstation_army: IndustrialFuel {
 		lootPos[] = {
-			{5.35742, -0.0854492, -2.28509}, //small
-			{-5.6543, 5.2168, -2.28509} //small
+			{5.35742, -0.0854492, -2.28509},
+			{-5.6543, 5.2168, -2.28509}
 		};
 	};
 	class Land_smd_dum_olezlina_open: Residential {
 		lootPos[] = {
-			{-7.11621, 3.34131, -2.8848}, //small
-			{-4.04492, -3.46143, -3.8348}, //small
-			{-0.479492, -3.27441, -3.8348}, //small
-			{0.732422, -3.22388, -3.8348}, //small
-			{7.52441, -3.4646, -3.83481}, //small
-			{6.87402, 3.16968, -3.8348}, //small
-			{7.39355, -2.84497, 0.26593}, //small
-			{0.832031, -3.29199, -0.434067}, //small
-			{0.844727, 1.38892, -0.434067}, //small
-			{-6.35742, -2.81445, -0.434067}, //small
-			{-4.03027, 1.60107, -0.434067}, //small
-			{-1.84375, -3.04736, -0.436424}, //small
-			{-2.97949, 3.24463, -3.8348} //small
+			{-7.11621, 3.34131, -2.8848},
+			{-4.04492, -3.46143, -3.8348},
+			{-0.479492, -3.27441, -3.8348},
+			{0.732422, -3.22388, -3.8348},
+			{7.52441, -3.4646, -3.83481},
+			{6.87402, 3.16968, -3.8348},
+			{7.39355, -2.84497, 0.26593},
+			{0.832031, -3.29199, -0.434067},
+			{0.844727, 1.38892, -0.434067},
+			{-6.35742, -2.81445, -0.434067},
+			{-4.03027, 1.60107, -0.434067},
+			{-1.84375, -3.04736, -0.436424},
+			{-2.97949, 3.24463, -3.8348}
 		};
 	};
 	class Land_smd_dum_mesto_in_open: Residential {
 		lootPos[] = {
-			{-5.32031, -3.25903, -3.96844}, //small
-			{-3.80859, 0.807617, -3.96844}, //small
-			{4.89258, -3.01001, -3.41931}, //small
-			{5, 4.44434, -3.96931}, //small
-			{2.2373, 0.507324, -3.96931}, //small
-			{1.21094, 4.39941, -2.46075}, //small
-			{6.16113, -3.69434, 0.213913}, //small
-			{3.80371, 4.771, -0.986084}, //small
-			{1.28418, 0.909668, -0.036087}, //small
-			{-5.84473, -4.84497, -0.817612}, //small
-			{-0.996094, 4.57031, -0.980965}, //small
-			{-6.18164, 0.42041, 0.219032}, //small
-			{-6.07617, -3.63818, -0.980965}, //small
-			{0.453125, -3.97168, -0.986084} //small
+			{-5.32031, -3.25903, -3.96844},
+			{-3.80859, 0.807617, -3.96844},
+			{4.89258, -3.01001, -3.41931},
+			{5, 4.44434, -3.96931},
+			{2.2373, 0.507324, -3.96931},
+			{1.21094, 4.39941, -2.46075},
+			{6.16113, -3.69434, 0.213913},
+			{3.80371, 4.771, -0.986084},
+			{1.28418, 0.909668, -0.036087},
+			{-5.84473, -4.84497, -0.817612},
+			{-0.996094, 4.57031, -0.980965},
+			{-6.18164, 0.42041, 0.219032},
+			{-6.07617, -3.63818, -0.980965},
+			{0.453125, -3.97168, -0.986084}
 		};
 	};
 	class Land_smd_budova3_open: Residential {
 		lootPos[] = {
-			{-1.6731, -0.0371094, -1.1634}, //small
-			{2.73413, -2.83691, -1.90865}, //small
-			{-3.08691, 2.49512, -1.91362} //small
+			{-1.6731, -0.0371094, -1.1634},
+			{2.73413, -2.83691, -1.90865},
+			{-3.08691, 2.49512, -1.91362}
 		};
 	};
 	class Land_smd_bouda_plech_open: Industrial {
 		lootPos[] = {
-			{0.262451, 1.64453, -1.04471}, //small
-			{0.462891, -1.70117, -1.03748} //small
+			{0.262451, 1.64453, -1.04471},
+			{0.462891, -1.70117, -1.03748}
 		};
 	};
 	class Land_smd_sara_stodola2: Industrial {
@@ -464,19 +906,19 @@ class CfgBuildingLoot {
 	};
 	class Land_sara_domek_podhradi_1: Residential {
 		lootPos[] = {
-			{-5.18237, 3.62109, -2.75808}, //small
-			{-5.18726, -0.751953, -2.75808}, //small
-			{-5.13086, -3.82715, -2.75808}, //small
-			{1.43921, -3.7168, -2.75808} //small
+			{-5.18237, 3.62109, -2.75808},
+			{-5.18726, -0.751953, -2.75808},
+			{-5.13086, -3.82715, -2.75808},
+			{1.43921, -3.7168, -2.75808}
 		};
 	};
 	class Land_smd_army_hut_int: Military {
 		lootPos[] = {
-			{-1.31726, 0.819824, -0.0588951}, //small
-			{2.47717, -0.00244141, -1.33056}, //small
-			{2.54358, -2.67383, -1.33056}, //small
-			{0.11792, -4.72656, -0.580559}, //small
-			{-1.99268, -2.08838, -1.34386} //small
+			{-1.31726, 0.819824, -0.0588951},
+			{2.47717, -0.00244141, -1.33056},
+			{2.54358, -2.67383, -1.33056},
+			{0.11792, -4.72656, -0.580559},
+			{-1.99268, -2.08838, -1.34386}
 		};
 	};
 };
