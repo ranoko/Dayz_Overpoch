@@ -921,4 +921,5 @@ class CfgBuildingLoot {
 			{-1.99268, -2.08838, -1.34386}
 		};
 	};
+#include "CfgBuildingPos.hpp"
 };
